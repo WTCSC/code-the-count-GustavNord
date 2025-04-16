@@ -1,8 +1,10 @@
 import random
 
-count_value = {
-    '1': 1, '2': 1, '3': 1, '4': 1, '5' : 1, '6': 1,
-    '7': 0, '8': 0, '9': 0,
-    '10': -1, 'J': -1, 'Q': -1, 'K': -1, 'A': -1,
-    
-}
+def running_count_value(card):
+    if card in ['2', '3', '4', '5', '6']:
+        return 1
+    elif card in ['7', '8', '9']:
+        return 0
+    elif card in ['10', 'J', 'Q', 'K', 'A']:
+        return -1
+    return 0
